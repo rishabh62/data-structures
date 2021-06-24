@@ -14,4 +14,4 @@ console.log( last(head) ) //prints: {value: 5, next: null}
 head = prepend(head, node(6, null))
 console.log(length(head))
 
-console.log(print(head)) //prints: 1 2 3 4 5 6
+console.log(print(head)) //prints: 6 1 2 3 4 5 
