@@ -1,4 +1,4 @@
-import {node, insert, search, startsWith} from './trie.mjs'
+import {node, insert, search, startsWith, print} from './trie.mjs'
 
 const log = whatever => console.log(whatever)
 
@@ -18,5 +18,5 @@ log(startsWith(trie, 'do'))
 log(startsWith(trie, 'ca'))
 log(startsWith(trie, 'cat'))
 log(startsWith(trie, 'ba'))
-
 log(trie)
+log(print(trie))

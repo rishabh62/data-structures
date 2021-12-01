@@ -30,4 +30,24 @@ const startsWith = (root, word) => {
     return endNode ? true : false 
 }
 
-export {node, insert, search, startsWith}
+const suggestions = (root, prefix, []) => {
+    const endNode = _traverse(root, prefix)
+    if(!endNode) return []
+    Object.keys(endNode)
+        .filter(x => x !== 'isEnd')
+        .map(x => prefix.concat(x))
+}
+
+const print = (root) => {
+    if(!root) return ''
+    let chars = Object.keys(root)
+                    .filter(x => x !== 'isEnd')
+                    console.log(chars)
+    let result = []
+    for(let ch of chars){
+        result.push(ch + print(root[ch]))
+    }
+    return result
+}
+
+export {node, insert, search, startsWith, print}
